@@ -1,1 +1,2 @@
 remote_theme: broccolini/athena
+permalink: /:year/:month/:day/:title/

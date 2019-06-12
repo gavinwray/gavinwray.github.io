@@ -1,2 +1,5 @@
-remote_theme: broccolini/athena
+# General Jekyll config
+title: Gavin Wray
+
+remote_theme: gavinwray/athena
 permalink: /:year/:month/:day/:title/

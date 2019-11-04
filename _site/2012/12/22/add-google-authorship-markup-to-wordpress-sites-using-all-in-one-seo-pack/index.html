@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Add Google authorship markup to WordPress sites using All in One SEO Pack by Gavin Wray</title>
+  <meta name="description" content="Updated 28 August 2014: John Mueller of Google Webmaster Tools announced that Google will stop showing authorship results in Google Search.">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
+
+  <link rel="canonical" href="http://localhost:4000/2012/12/22/add-google-authorship-markup-to-wordpress-sites-using-all-in-one-seo-pack/">
+  <link rel="alternate" type="application/rss+xml" title="Hi, I’m Gavin, a content designer" href="http://localhost:4000/feed.xml">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+  
+  <!-- font-smoothing is only applied on dark themes -->
+  <body class="font-smoothing">
+
+    <header class="px-2 clearfix">
+
+  <div class="right left-lg absolute-lg right-0 top-0">
+    <ul class="mt-2 mt-lg-2 mr-0 mr-lg-3">
+      <li class="inline-block text-right ml-2 ml-lg-0">
+        <a class="h5" href="/">
+          Home
+        </a>
+      </li>
+      
+        
+      
+        
+        <li class="inline-block text-right ml-1 ml-lg-3">
+          <a class="h5" href="/about/">
+            About me
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+
+  <div class="right-lg absolute-lg left-0 top-0 sm-width-full mt-2">
+      <span class="inline-block h5 bold ml-0 ml-lg-3">
+        <a href="http://localhost:4000">Gavin Wray</a>
+      </span>
+  </div>
+
+</header>
+
+
+    <div>
+      <article class="container mx-auto px-2" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="mt-4 mb-2 clearfix header-text">
+    <h1 class="h1 lh-condensed inline-block py-2 mt-4 header-title">Add Google authorship markup to WordPress sites using All in One SEO Pack</h1>
+    <div class="clearfix mb-4 py-1">
+      <p class="h5 lh-condensed"><time datetime="2012-12-22T00:00:00+00:00" itemprop="datePublished">22 December 2012</time></p>
+      <div class="col-1 sm-width-full border-top-thick">
+      </div>
+    </div>
+  </div>
+
+  <div class="prose py-4" itemprop="articleBody">
+      <p><em>Updated 28 August 2014: John Mueller of Google Webmaster Tools <a href="https://plus.google.com/+JohnMueller/posts/HZf3KDP1Dm8">announced</a> that Google will stop showing authorship results in Google Search.</em></p>
+
+<hr />
+
+<p>I’ve read up on <a href="http://googlewebmastercentral.blogspot.co.uk/2011/06/authorship-markup-and-web-search.html">Google authorship markup</a> this week, particularly in the context of adding it to self-hosted WordPress sites.</p>
+
+<p>For Google, the idea is to surface popular authors’ web content in search results. For writers or anyone publishing online, you can assert ownership of your content and enhance your personal brand online. (Urgh, I sound like a snake oil marcomms consultant in that last sentence; it’s true though.)</p>
+
+<p>Google shows the author’s avatar and extra detail in search results, which help the author’s content stand out. For example:</p>
+
+<p><img src="/assets/2012/12/authors-in-google-search-results.png" alt="Authors in Google search results with photos" /></p>
+
+<p>Authorship markup describes the relationship between a piece of content and its author semantically. This helps search engines to identify the author’s work wherever it appears online. In practice, this means explicitly linking your Google+ profile to your content using <code class="highlighter-rouge">rel="author"</code>.</p>
+
+<h2 id="connect-your-sites-to-your-google-profile">Connect your sites to your Google+ profile</h2>
+
+<p>The first thing to do is add the sites you write for to your Google+ profile:</p>
+
+<ol>
+  <li>
+    <p>In Google+, go to your profile and click <strong>Edit profile</strong>.</p>
+  </li>
+  <li>
+    <p>Click the <strong>About</strong> tab and scroll down to the <strong>Contributor to</strong> section.</p>
+  </li>
+  <li>
+    <p>Click the <strong>Contributor to</strong> label and add your website.</p>
+
+    <p><img src="/assets/2012/12/contributor-to1.jpg" alt="Contributor to site URLs" /></p>
+  </li>
+  <li>
+    <p>Save your changes.</p>
+  </li>
+</ol>
+
+<h2 id="add-authorship-markup-to-a-single-author-wordpress-site">Add authorship markup to a single-author WordPress site</h2>
+
+<p>After reading lengthy guides by <a href="http://searchengineland.com/the-definitive-guide-to-google-authorship-markup-123218">Rick DeJarnette</a> and <a href="http://designfestival.com/add-rich-snippet-support-in-wordpress-and-dominate-your-personal-brand/">Tara Horner</a>, adding authorship markup seems too complex a process. For WordPress themes, Tara explains editing the post and author page templates to include <code class="highlighter-rouge">rel="author"</code> on the post author name anchor, and linking the author’s name to her Google+ profile.</p>
+
+<p>This doesn’t suit my purposes.</p>
+
+<p>Firstly, I’m the only person writing on this site. This is a ‘single-author WordPress blog’ and it’s obvious to readers I write all the posts. To change the post metadata to include my name, and link it to my Google+ profile, just so I can add <code class="highlighter-rouge">rel="author"</code> seems daft. That would mean changing the post metadata from:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Carefully posted on 15th December 2012
+</code></pre></div></div>
+
+<p>…to:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Carefully posted on 15th December 2012 by <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"https://plus.google.com/u/1/109382002866848246485/"</span><span class="nt">&gt;</span>Gavin Wray<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<p>For multi-author WordPress blogs, changing the post metadata in this way would break WordPress’ established navigation to view all posts by an author by clicking the author’s name.</p>
+
+<p>After digging around my site, I found a solution using the <a href="http://wordpress.org/extend/plugins/all-in-one-seo-pack/">All in One SEO Pack</a> plugin.</p>
+
+<ol>
+  <li>
+    <p>In your WordPress dashboard, go to <strong>Settings &gt; All in One SEO</strong>.</p>
+  </li>
+  <li>
+    <p>Scroll down to the text field labelled <strong>Google Plus Profile Sitewide Default</strong> and enter your Google+ profile URL. If you don’t know your URL, go to <a href="https://plus.google.com">Google+</a>, right-click on your <strong>Profile</strong> icon and copy the link. It looks something like:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> https://plus.google.com/u/1/1234567890
+</code></pre></div>    </div>
+
+    <p><img src="/assets/2012/12/copy-google-profile-url.png" alt="Copy Google+ profile URL" /></p>
+  </li>
+  <li>
+    <p>Scroll to the bottom of the All in One SEO settings and click <strong>Update Options</strong>.</p>
+  </li>
+  <li>
+    <p>Visit any page on your website and view the source HTML. Notice the following line in the <code class="highlighter-rouge">head</code> section:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"https://plus.google.com/u/1/109382002866848246485"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+
+    <p>This line tells search engines that the page was written by the person who owns the Google+ profile at the specified URL.</p>
+  </li>
+  <li>
+    <p>Now it’s time to test using Google’s <a href="http://www.google.com/webmasters/tools/richsnippets">structured data testing tool</a> tool. Copy any URL of a page on your site and paste it in the URL field. You should see a preview of how your page will appear in search results alongside your avatar, links to more of your content and verified authorship:</p>
+
+    <p><img src="/assets/2012/12/authorship-preview-in-structured-data-testing-tool.png" alt="Authorship preview in Google structured data testing tool" /></p>
+  </li>
+</ol>
+
+<h2 id="add-authorship-markup-to-a-multi-author-wordpress-site">Add authorship markup to a multi-author WordPress site</h2>
+
+<p>If your WordPress site has multiple contributors and you’re using the All in One SEO Pack, the process to add authorship markup is different.</p>
+
+<ol>
+  <li>
+    <p>In your WordPress dashboard, go to <strong>Settings &gt; All in One SEO</strong>.</p>
+  </li>
+  <li>
+    <p>Scroll down to the text field labelled <strong>Google Plus Profile Sitewide Default</strong> and ensure it’s empty.</p>
+  </li>
+  <li>
+    <p>Go to <strong>Users &gt; Your Profile</strong> and you can see a field labelled <strong>Google+</strong>.</p>
+  </li>
+  <li>
+    <p>Enter your Google+ profile URL and save your changes.</p>
+  </li>
+  <li>
+    <p>Visit any post or page <em>that you published on the site</em>, view the source HTML and you should see the markup in the <code class="highlighter-rouge">&lt;head&gt;</code>:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"https://plus.google.com/u/1/109382002866848246485"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>I hope this method is simpler than editing your WordPress theme.</p>
+
+  </div>
+</article>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  <!-- Use if you want to show previous and next for all posts. -->
+
+
+
+  <div class="col-5 sm-width-full left mr-lg-4 mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2012/12/15/book-review-designing-the-invisible/">
+      <span>Previous article</span>
+      <p class="bold h5 lh-condensed mb-1">Book review: 'A Practical Guide to Designing the Invisible'</p>
+    </a>
+  </div>
+  
+  
+  <div class="col-5 sm-width-full left mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2013/01/02/work-priority-matrix-customer-employer/">
+      <span>Next article</span>
+      <p class="bold h5 lh-condensed mb-1">Balancing competing demands from customers and your employer</p>
+    </a>
+  </div>
+
+
+</div>
+
+    </div>
+
+    <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
+  <div class="border-top-thick">
+    <p class="col-6 sm-width-full left py-2 mb-0">Content &copy; 2008-2019 Gavin Wray<br />
+      <a href="https://github.com/broccolini/athena">Athena theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
+    <p class="right clearfix sm-width-full py-2 mb-2 mb-lg-0"><a href="https://twitter.com/gavinwray">Twitter</a> &middot; <a href="https://www.linkedin.com/in/gavinwray/">LinkedIn</a> &middot; <a href="https://soundcloud.com/finalpilots">SoundCloud</a> &middot; <a href="https://github.com/gavinwray">GitHub</a></p>
+  </div>
+</div>
+
+
+  </body>
+
+</html>

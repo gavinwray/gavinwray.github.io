@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Visualisation of listening habits using last.fm API and Google Spreadsheets by Gavin Wray</title>
+  <meta name="description" content="I’ve made a data visualisation showing the top 50 artists I listened to in 2010. The size of the artist photo is proportional to the number of times I listen...">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
+
+  <link rel="canonical" href="http://localhost:4000/2011/01/03/visualisation-of-listening-habits-using-last-fm-api/">
+  <link rel="alternate" type="application/rss+xml" title="Hi, I’m Gavin, a content designer" href="http://localhost:4000/feed.xml">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+  
+  <!-- font-smoothing is only applied on dark themes -->
+  <body class="font-smoothing">
+
+    <header class="px-2 clearfix">
+
+  <div class="right left-lg absolute-lg right-0 top-0">
+    <ul class="mt-2 mt-lg-2 mr-0 mr-lg-3">
+      <li class="inline-block text-right ml-2 ml-lg-0">
+        <a class="h5" href="/">
+          Home
+        </a>
+      </li>
+      
+        
+      
+        
+        <li class="inline-block text-right ml-1 ml-lg-3">
+          <a class="h5" href="/about/">
+            About me
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+
+  <div class="right-lg absolute-lg left-0 top-0 sm-width-full mt-2">
+      <span class="inline-block h5 bold ml-0 ml-lg-3">
+        <a href="http://localhost:4000">Gavin Wray</a>
+      </span>
+  </div>
+
+</header>
+
+
+    <div>
+      <article class="container mx-auto px-2" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="mt-4 mb-2 clearfix header-text">
+    <h1 class="h1 lh-condensed inline-block py-2 mt-4 header-title">Visualisation of listening habits using last.fm API and Google Spreadsheets</h1>
+    <div class="clearfix mb-4 py-1">
+      <p class="h5 lh-condensed"><time datetime="2011-01-03T00:00:00+00:00" itemprop="datePublished">3 January 2011</time></p>
+      <div class="col-1 sm-width-full border-top-thick">
+      </div>
+    </div>
+  </div>
+
+  <div class="prose py-4" itemprop="articleBody">
+      <p>I’ve made a data visualisation showing the top 50 artists I listened to in 2010. The size of the artist photo is proportional to the number of times I listened to any track by that artist in 2010. This post walks you through my process to create the image.</p>
+
+<p><img src="/assets/2011/01/my-top-artists-2010-viz-final.jpg" alt="Visualisation of top 50 listened to artists in 2010" /></p>
+
+<h2 id="overview">Overview</h2>
+
+<ol>
+  <li>Get the listening data from the last.fm API.</li>
+  <li>Turn the data into a form suitable for importing into Google Spreadsheets.</li>
+  <li>Visualise the data in a tree map.</li>
+  <li>Overlay the photos on the tree map.</li>
+</ol>
+
+<h2 id="get-the-listening-data-from-lastfm-api">Get the listening data from last.fm API</h2>
+
+<p>I use <a href="http://last.fm">Last.fm</a> to store data about my listening habits. Any track I listen to on my phone, in Spotify or the last.fm website is ‘scrobbled’ to <a href="http://www.last.fm/user/denituthered">my Last.fm profile</a>.</p>
+
+<p>You can access your data using the <a href="http://www.last.fm/api">Last.fm API</a>.  (Sign up for an API key, if you haven’t already done so.) You get the data by submitting a request (i.e. typing the address in a web browser) to:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://ws.audioscrobbler.com/2.0/
+</code></pre></div></div>
+
+<p>…and appending a method, your API key and (optionally) a time period.</p>
+
+<p>To get the data about the top artists I listened to in 2010, I used <code class="highlighter-rouge">getTopArtists</code>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://ws.audioscrobbler.com/2.0/?method=user.gettopartists
+<span class="ni">&amp;amp;</span>user=denituthered<span class="ni">&amp;amp;</span>period=12month<span class="ni">&amp;amp;</span>api_key=myAPIKey
+</code></pre></div></div>
+
+<p>This returns the data as XML. It looks something like this:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;lfm</span> <span class="na">status=</span><span class="s">"ok"</span><span class="nt">&gt;</span>
+
+  Left Lane Cruiser
+  179
+
+  http://www.last.fm/music/Left+Lane+Cruiser
+  1
+  http://userserve-ak.last.fm/serve/34/13235587.jpg
+  http://userserve-ak.last.fm/serve/64/13235587.jpg
+  http://userserve-ak.last.fm/serve/126/13235587.jpg
+  http://userserve-ak.last.fm/serve/252/13235587.jpg
+  http://userserve-ak.last.fm/serve/500/13235587/Left+Lane+Cruiser+LLC.jpg
+
+  Otis Taylor
+  165
+  ...
+
+  Black Stone Cherry
+  165
+  ...
+</code></pre></div></div>
+
+<h2 id="prepare-the-data-for-google-spreadsheets">Prepare the data for Google Spreadsheets</h2>
+
+<p>I wanted my data in Google Spreadsheets so I could use Google’s visualisation tools. However, XML isn’t a supported file format, so I couldn’t just throw my XML file up there and start. I needed to turn my XML into a format suitable for Google Spreadsheets, such as CSV.</p>
+
+<p>You can do this with recent versions of Microsoft Excel or other Office tools. I needed something free and used <a href="http://code.google.com/p/google-refine/">Google Refine</a>. It’s useful for cleaning data and exporting to different formats.</p>
+
+<p>I opened the XML file in Google Refine and deleted the extraneous columns and rows, leaving the following fields (as column titles):</p>
+
+<ul>
+  <li>Rank</li>
+  <li>Artist</li>
+  <li>Playcount</li>
+  <li>Image URL</li>
+</ul>
+
+<p>I then saved the data as a CSV file and uploaded it to Google Spreadsheets (<a href="https://spreadsheets.google.com/ccc?key=0AgZ8vzDVpgaQdDlpd05mVFFEYkhsUnUtQTQwSWJWbnc&amp;hl=en_GB">see the file</a>).</p>
+
+<h2 id="visualise-the-data">Visualise the data</h2>
+
+<p>To get the basic layout of the visualisation I created a tree map. In Google Spreadsheets:</p>
+
+<ol>
+  <li>I selected the required data fields: <code class="highlighter-rouge">Artist</code> and <code class="highlighter-rouge">Playcount</code>.</li>
+  <li>Chose <strong>Insert &gt; Gadget &gt; Tree Map Gadget</strong>.</li>
+  <li>Placed the tree map in a new sheet.</li>
+</ol>
+
+<p><img src="/assets/2011/01/treemap-fullsize.png" alt="Top 50 listened to artists visualised as a treemap" /></p>
+
+<p>The tree map recalculates itself when you change your browser window dimensions. I wanted to make an image at approximately A4 landscape, and changed the window dimensions until I got a layout that felt right.</p>
+
+<h2 id="overlay-the-photos">Overlay the photos</h2>
+
+<p>I took a screenshot of the tree map, opened it in an image editor and increased the image dimensions by 50% to create a larger image to work with.</p>
+
+<p>The Last.fm data includes image URLs. I did use some, but where there were odd shapes in the tree map, I searched for suitable images that work well in extreme letterbox or elongated shapes.</p>
+
+<p>The final stage involved cropping the photo of each artist to the same dimensions as the underlying shape in the tree map. I started with Left Lane Cruiser and Otis Taylor at the top left, then worked my way through the other artists.</p>
+
+<p><img src="/assets/2011/01/overlay-photos.jpg" alt="Overlay photos on tree map" /></p>
+
+<p>This is the final result:</p>
+
+<p><img src="/assets/2011/01/my-top-artists-2010-viz-final.jpg" alt="Visualisation of top 50 listened to artists in 2010" /></p>
+
+  </div>
+</article>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  <!-- Use if you want to show previous and next for all posts. -->
+
+
+
+  <div class="col-5 sm-width-full left mr-lg-4 mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2010/12/15/christmas-o-meter/">
+      <span>Previous article</span>
+      <p class="bold h5 lh-condensed mb-1">Christmas-o-meter</p>
+    </a>
+  </div>
+  
+  
+  <div class="col-5 sm-width-full left mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2011/05/15/beast-wordpress-theme-for-dirty-bristow-magazine/">
+      <span>Next article</span>
+      <p class="bold h5 lh-condensed mb-1">Beast WordPress theme for Dirty Bristow magazine</p>
+    </a>
+  </div>
+
+
+</div>
+
+    </div>
+
+    <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
+  <div class="border-top-thick">
+    <p class="col-6 sm-width-full left py-2 mb-0">Content &copy; 2008-2019 Gavin Wray<br />
+      <a href="https://github.com/broccolini/athena">Athena theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
+    <p class="right clearfix sm-width-full py-2 mb-2 mb-lg-0"><a href="https://twitter.com/gavinwray">Twitter</a> &middot; <a href="https://www.linkedin.com/in/gavinwray/">LinkedIn</a> &middot; <a href="https://soundcloud.com/finalpilots">SoundCloud</a> &middot; <a href="https://github.com/gavinwray">GitHub</a></p>
+  </div>
+</div>
+
+
+  </body>
+
+</html>

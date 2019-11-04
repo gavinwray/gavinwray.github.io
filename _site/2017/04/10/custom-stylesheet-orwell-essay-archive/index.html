@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Custom stylesheet for the George Orwell essay archive by Gavin Wray</title>
+  <meta name="description" content="I found an archive of George Orwell’s essays in English and Russian language while searching for a full-text version of Politics and the English Language (19...">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
+
+  <link rel="canonical" href="http://localhost:4000/2017/04/10/custom-stylesheet-orwell-essay-archive/">
+  <link rel="alternate" type="application/rss+xml" title="Hi, I’m Gavin, a content designer" href="http://localhost:4000/feed.xml">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+  
+  <!-- font-smoothing is only applied on dark themes -->
+  <body class="font-smoothing">
+
+    <header class="px-2 clearfix">
+
+  <div class="right left-lg absolute-lg right-0 top-0">
+    <ul class="mt-2 mt-lg-2 mr-0 mr-lg-3">
+      <li class="inline-block text-right ml-2 ml-lg-0">
+        <a class="h5" href="/">
+          Home
+        </a>
+      </li>
+      
+        
+      
+        
+        <li class="inline-block text-right ml-1 ml-lg-3">
+          <a class="h5" href="/about/">
+            About me
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+
+  <div class="right-lg absolute-lg left-0 top-0 sm-width-full mt-2">
+      <span class="inline-block h5 bold ml-0 ml-lg-3">
+        <a href="http://localhost:4000">Gavin Wray</a>
+      </span>
+  </div>
+
+</header>
+
+
+    <div>
+      <article class="container mx-auto px-2" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="mt-4 mb-2 clearfix header-text">
+    <h1 class="h1 lh-condensed inline-block py-2 mt-4 header-title">Custom stylesheet for the George Orwell essay archive</h1>
+    <div class="clearfix mb-4 py-1">
+      <p class="h5 lh-condensed"><time datetime="2017-04-10T00:00:00+01:00" itemprop="datePublished">10 April 2017</time></p>
+      <div class="col-1 sm-width-full border-top-thick">
+      </div>
+    </div>
+  </div>
+
+  <div class="prose py-4" itemprop="articleBody">
+      <p>I found an archive of <a href="http://www.orwell.ru/library/essays">George Orwell’s essays in English and Russian language</a> while searching for a full-text version of <em><a href="http://www.orwell.ru/library/essays/politics/english/e_polit">Politics and the English Language</a></em> (1946). This essay contains Orwell’s famous six rules for clear writing, which are touchstones for content people.</p>
+
+<p>The site’s typography makes for a difficult reading experience:</p>
+
+<ul>
+  <li>long line lengths spanning the full width of the browser</li>
+  <li>justified paragraphs rather than left-aligned (ragged right)</li>
+  <li>tight leading</li>
+</ul>
+
+<p>When reading long-form articles online, I prefer large sans-serif body text, constrained line lengths and leading between 1.3 and 1.5 <a href="https://en.wikipedia.org/wiki/Em_(typography)">ems</a>.</p>
+
+<p>To improve the reading experience, I made a custom stylesheet with new typography for use with the Stylish browser extension. I’ve shared the stylesheet via <a href="https://userstyles.org/styles/141074/modern-typography-for-george-orwell-s-essays">userstyles.org</a> and <a href="https://github.com/gavinwray/stylish-orwell">GitHub</a>.</p>
+
+<h2 id="before">Before</h2>
+
+<p><img src="/assets/2017/04/orwell-before-min.png" alt="Politics and the English Language - before custom styles" /></p>
+
+<p>Image: <a href="http://www.orwell.ru/library/essays/politics/english/e_polit">orwell.ru</a></p>
+
+<h2 id="after">After</h2>
+
+<p><img src="/assets/2017/04/orwell-after-min.png" alt="Politics and the English Language - after custom styles" /></p>
+
+<h2 id="install-via-userstylesorg-directory">Install via userstyles.org directory</h2>
+
+<ol>
+  <li>
+    <p>Add the Stylish extension to your browser. The extension is available for <a href="https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=en">Chrome</a>, <a href="https://addons.mozilla.org/en-GB/firefox/addon/stylish/">Firefox</a>, <a href="https://safari-extensions.apple.com/details/?id=com.sobolev.stylish-5555L95H45">Safari</a> and <a href="https://addons.opera.com/en-gb/extensions/details/stylish/">Opera</a>.</p>
+  </li>
+  <li>
+    <p>Visit <a href="https://userstyles.org/styles/141074/">https://userstyles.org/styles/141074/</a>.</p>
+  </li>
+  <li>
+    <p>Click <strong>Install with Stylish</strong>.</p>
+  </li>
+  <li>
+    <p>View any of the <a href="http://www.orwell.ru/library/essays/">essays</a>.</p>
+  </li>
+  <li>
+    <p>The Stylish extension should prompt you that styles are available for the current site. Accept the prompt and add the styles.</p>
+  </li>
+</ol>
+
+<h2 id="install-manually">Install manually</h2>
+
+<p>In Chrome the Stylish extension may not reliably prompt you that styles are available for the current site.</p>
+
+<p>To add the stylesheet manually:</p>
+
+<ol>
+  <li>
+    <p>Select the browser extension icon and select <strong>Create new style</strong>.</p>
+  </li>
+  <li>
+    <p>Give the style a name.</p>
+  </li>
+  <li>
+    <p>In <a href="https://github.com/gavinwray/stylish-orwell/blob/master/stylish.css">stylish.css</a> copy all of the styles that are inside the <code class="highlighter-rouge">@-moz-document</code> and <code class="highlighter-rouge">url-prefix</code> rules.</p>
+  </li>
+  <li>
+    <p>Paste the styles in the <strong>Code 1</strong> box.</p>
+  </li>
+  <li>
+    <p>In the <strong>Applies to</strong> settings, choose <strong>URLs starting with</strong> from the drop-down list.</p>
+  </li>
+  <li>
+    <p>Enter <code class="highlighter-rouge">http://www.orwell.ru/library/essays/</code> in the box.</p>
+  </li>
+  <li>
+    <p>Select <strong>Save</strong>.</p>
+  </li>
+</ol>
+
+  </div>
+</article>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  <!-- Use if you want to show previous and next for all posts. -->
+
+
+
+  <div class="col-5 sm-width-full left mr-lg-4 mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2016/12/17/what-ive-been-doing-in-2015-and-2016/">
+      <span>Previous article</span>
+      <p class="bold h5 lh-condensed mb-1">What I've been doing in 2015 and 2016</p>
+    </a>
+  </div>
+  
+  
+  <div class="col-5 sm-width-full left mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2017/07/15/audio-and-2d-image-to-3d-animation/">
+      <span>Next article</span>
+      <p class="bold h5 lh-condensed mb-1">Audio and 2D image to 3D animation with TouchDesigner</p>
+    </a>
+  </div>
+
+
+</div>
+
+    </div>
+
+    <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
+  <div class="border-top-thick">
+    <p class="col-6 sm-width-full left py-2 mb-0">Content &copy; 2008-2019 Gavin Wray<br />
+      <a href="https://github.com/broccolini/athena">Athena theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
+    <p class="right clearfix sm-width-full py-2 mb-2 mb-lg-0"><a href="https://twitter.com/gavinwray">Twitter</a> &middot; <a href="https://www.linkedin.com/in/gavinwray/">LinkedIn</a> &middot; <a href="https://soundcloud.com/finalpilots">SoundCloud</a> &middot; <a href="https://github.com/gavinwray">GitHub</a></p>
+  </div>
+</div>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>I&#39;ve been hacked by Gavin Wray</title>
+  <meta name="description" content="This site was hacked in early January. The first I knew of the hack was seeing the words “This site may be compromised” in Google’s search results and my pag...">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
+
+  <link rel="canonical" href="http://localhost:4000/2013/01/24/ive-been-hacked/">
+  <link rel="alternate" type="application/rss+xml" title="Hi, I’m Gavin, a content designer" href="http://localhost:4000/feed.xml">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+  
+  <!-- font-smoothing is only applied on dark themes -->
+  <body class="font-smoothing">
+
+    <header class="px-2 clearfix">
+
+  <div class="right left-lg absolute-lg right-0 top-0">
+    <ul class="mt-2 mt-lg-2 mr-0 mr-lg-3">
+      <li class="inline-block text-right ml-2 ml-lg-0">
+        <a class="h5" href="/">
+          Home
+        </a>
+      </li>
+      
+        
+      
+        
+        <li class="inline-block text-right ml-1 ml-lg-3">
+          <a class="h5" href="/about/">
+            About me
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+
+  <div class="right-lg absolute-lg left-0 top-0 sm-width-full mt-2">
+      <span class="inline-block h5 bold ml-0 ml-lg-3">
+        <a href="http://localhost:4000">Gavin Wray</a>
+      </span>
+  </div>
+
+</header>
+
+
+    <div>
+      <article class="container mx-auto px-2" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="mt-4 mb-2 clearfix header-text">
+    <h1 class="h1 lh-condensed inline-block py-2 mt-4 header-title">I've been hacked</h1>
+    <div class="clearfix mb-4 py-1">
+      <p class="h5 lh-condensed"><time datetime="2013-01-24T00:00:00+00:00" itemprop="datePublished">24 January 2013</time></p>
+      <div class="col-1 sm-width-full border-top-thick">
+      </div>
+    </div>
+  </div>
+
+  <div class="prose py-4" itemprop="articleBody">
+      <p>This site was hacked in early January. The first I knew of the hack was seeing the words “This site may be compromised” in Google’s search results and my page titles filled with spam.</p>
+
+<p>More than two weeks later, some of my pages (particularly tag archives) in Google’s index are still affected:</p>
+
+<p><img src="/assets/2013/01/google-results.png" alt="Google search results for my site on 24th Jan 2013" /></p>
+
+<p>It’s a sickening feeling knowing your public words, a good chunk of your online heritage, have been wrecked. It’s more frustrating to know that the hack was unlikely deliberate or personal. A vulnerability in my WordPress installation or settings allowed a machine to probe, enter and frack about with my site.</p>
+
+<p>If you’ve ever had your WordPress site hacked, you’ll recognise that plunging feeling in your stomach as you see upcoming free evenings and weekends vanish. You know your time will disappear in the screen glare of tutorials, how-to guides, exporting and importing databases, phpMyAdmin and support calls with your web host.</p>
+
+<p>Since then, I’ve decided to start over with a new WordPress install and the <a href="http://www.onedesigns.com/wordpress-themes/pinboard">Pinboard</a> theme <del>you can see now</del>.</p>
+
+<p>Eventually technology forced my hand. After crafting a new local version of this site using <a href="http://www.mamp.info/en/index.html">MAMP</a> and <a href="http://wordpress.org">WordPress</a>, deploying the database to the live site proved beyond me.</p>
+
+<p>The method I’ve used before – export your local database, find all instances of <code class="highlighter-rouge">yourtest.yourdomain.com</code> and replace with <code class="highlighter-rouge">yourdomain.com</code>, save and upload to your live site along with the new <code class="highlighter-rouge">wp-content</code> directory – didn’t work. Rolling back to an earlier version of the live site didn’t work either. Mysteriously, I was left with a home page but no blog. Papsticks.</p>
+
+<p>In a fit, I trashed the lot, created a fresh install on the live domain name, used WordPress’ import/export tool to import content from my Mac into the site you can see now. This means that all the posts and pages are back, though many images are missing from the content and there are no featured images on posts yet.</p>
+
+<p>I apologise now if you follow links that don’t work or read a how-to post with screenshots missing. It’ll take a few days for me to get things back in order.</p>
+
+<p>In the meantime, here are some tools and mentions of people who proved invaluable in restoring this site and making it more secure:</p>
+
+<ul>
+  <li>My web host <a href="http://dreamhost.com/">DreamHost</a> were fantastic, giving me detailed step-by-step instructions on clearing up my server and working through my WordPress install to check for anomalies or malicious changes.</li>
+  <li><a href="http://www.jamesdclarke.com/">James Clarke</a> recommended <a href="https://sitecheck.sucuri.net/">Sucuri SiteCheck</a>, a tool to scan your site for malware. Even better, James recommended the <a href="http://wordpress.org/extend/plugins/wordfence/">WordFence</a> plugin. This has been a real eye-opener. As well as containing tweaks to shore up vulnerable areas bots and hackers look for, you can use it to automatically block bots that hammer your WordPress login page and get email alerts. I’ve just checked my email. In the last hour, there have been 33 different instances of a bot attempting to log in to my WordPress dashboard. Yikes!</li>
+  <li>A post on <a href="http://www.wpsite.net/how-to-remove-this-site-may-be-compromised-warning/">how to remove this site may be compromised warning</a> by Charlie Patel.</li>
+  <li>Advice on <a href="http://support.google.com/webmasters/bin/answer.py?hl=en&amp;answer=163634&amp;topic=2365140&amp;ctx=topic">cleaning your site</a> in Google Webmaster Tools. [Updated 13th March 2013: Google announced new <a href="http://googlewebmastercentral.blogspot.co.uk/2013/03/new-first-stop-for-hacked-site-recovery.html">resources for hacked site recovery</a>.]</li>
+</ul>
+
+  </div>
+</article>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  <!-- Use if you want to show previous and next for all posts. -->
+
+
+
+  <div class="col-5 sm-width-full left mr-lg-4 mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2013/01/02/work-priority-matrix-customer-employer/">
+      <span>Previous article</span>
+      <p class="bold h5 lh-condensed mb-1">Balancing competing demands from customers and your employer</p>
+    </a>
+  </div>
+  
+  
+  <div class="col-5 sm-width-full left mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2013/01/30/mailchimps-voice-and-tone-style-guide/">
+      <span>Next article</span>
+      <p class="bold h5 lh-condensed mb-1">MailChimp's voice and tone style guide</p>
+    </a>
+  </div>
+
+
+</div>
+
+    </div>
+
+    <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
+  <div class="border-top-thick">
+    <p class="col-6 sm-width-full left py-2 mb-0">Content &copy; 2008-2019 Gavin Wray<br />
+      <a href="https://github.com/broccolini/athena">Athena theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
+    <p class="right clearfix sm-width-full py-2 mb-2 mb-lg-0"><a href="https://twitter.com/gavinwray">Twitter</a> &middot; <a href="https://www.linkedin.com/in/gavinwray/">LinkedIn</a> &middot; <a href="https://soundcloud.com/finalpilots">SoundCloud</a> &middot; <a href="https://github.com/gavinwray">GitHub</a></p>
+  </div>
+</div>
+
+
+  </body>
+
+</html>

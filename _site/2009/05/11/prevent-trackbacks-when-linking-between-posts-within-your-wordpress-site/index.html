@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Prevent trackbacks when linking between posts within your WordPress site by Gavin Wray</title>
+  <meta name="description" content="I’m a fan of revisiting posts within a blog and linking to related posts. Whether adding cross-references in the body of the text or at the end of a post via...">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
+
+  <link rel="canonical" href="http://localhost:4000/2009/05/11/prevent-trackbacks-when-linking-between-posts-within-your-wordpress-site/">
+  <link rel="alternate" type="application/rss+xml" title="Hi, I’m Gavin, a content designer" href="http://localhost:4000/feed.xml">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+  
+  <!-- font-smoothing is only applied on dark themes -->
+  <body class="font-smoothing">
+
+    <header class="px-2 clearfix">
+
+  <div class="right left-lg absolute-lg right-0 top-0">
+    <ul class="mt-2 mt-lg-2 mr-0 mr-lg-3">
+      <li class="inline-block text-right ml-2 ml-lg-0">
+        <a class="h5" href="/">
+          Home
+        </a>
+      </li>
+      
+        
+      
+        
+        <li class="inline-block text-right ml-1 ml-lg-3">
+          <a class="h5" href="/about/">
+            About me
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+
+  <div class="right-lg absolute-lg left-0 top-0 sm-width-full mt-2">
+      <span class="inline-block h5 bold ml-0 ml-lg-3">
+        <a href="http://localhost:4000">Gavin Wray</a>
+      </span>
+  </div>
+
+</header>
+
+
+    <div>
+      <article class="container mx-auto px-2" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="mt-4 mb-2 clearfix header-text">
+    <h1 class="h1 lh-condensed inline-block py-2 mt-4 header-title">Prevent trackbacks when linking between posts within your WordPress site</h1>
+    <div class="clearfix mb-4 py-1">
+      <p class="h5 lh-condensed"><time datetime="2009-05-11T00:00:00+01:00" itemprop="datePublished">11 May 2009</time></p>
+      <div class="col-1 sm-width-full border-top-thick">
+      </div>
+    </div>
+  </div>
+
+  <div class="prose py-4" itemprop="articleBody">
+      <p>I’m a fan of revisiting posts within a blog and linking to related posts. Whether adding cross-references in the body of the text or at the end of a post via a <a href="http://wordpress.org/extend/plugins/search.php?q=related+posts">related posts plugin</a>, I think these links can benefit both readers and site owners.</p>
+
+<p>Linking between posts is also essential if you’re writing a series of related posts.</p>
+
+<p>One result of linking posts bothers me though. Trackbacks or pingbacks in the comments section of your own post don’t make sense in the context of your own site. Trackbacks only make sense in the context of other people linking to your post.</p>
+
+<p>So how do trackbacks appear in the first place?</p>
+
+<p>In WordPress, if you’ve enabled trackbacks and pingbacks in your post:</p>
+
+<p><img src="/assets/2009/05/trackbacks-pingbacks-enabled.png" alt="Trackbacks and pingbacks enabled in WordPress" /></p>
+
+<p>and you add an absolute link to a second post within your site:</p>
+
+<p><img src="/assets/2009/05/insert-link-dialog-box.png" alt="Insert link dialog box in WordPress admin interface" /></p>
+
+<p>a trackback appears in the comments list of the second post.</p>
+
+<h2 id="how-to-prevent-trackbacks-for-posts-within-your-own-site">How to prevent trackbacks for posts within your own site</h2>
+
+<p>You can prevent trackbacks appearing when linking posts on your own site by using relative instead of absolute links. For example, use the relative link:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/link-to-post
+</code></pre></div></div>
+
+<p>instead of the absolute link:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://yoursite.com/link-to-post
+</code></pre></div></div>
+
+<p><a href="http://twitter.com/timtfj/statuses/1648310438">Hat tip to Tim J</a> for this information.</p>
+
+  </div>
+</article>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  <!-- Use if you want to show previous and next for all posts. -->
+
+
+
+  <div class="col-5 sm-width-full left mr-lg-4 mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2009/03/22/vintage-photography-memorabilia/">
+      <span>Previous article</span>
+      <p class="bold h5 lh-condensed mb-1">Vintage photography memorabilia</p>
+    </a>
+  </div>
+  
+  
+  <div class="col-5 sm-width-full left mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2009/05/14/sixth-social-media-surgery-for-voluntary-and-community-groups-in-birmingham/">
+      <span>Next article</span>
+      <p class="bold h5 lh-condensed mb-1">Sixth social media surgery for voluntary and community groups in Birmingham</p>
+    </a>
+  </div>
+
+
+</div>
+
+    </div>
+
+    <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
+  <div class="border-top-thick">
+    <p class="col-6 sm-width-full left py-2 mb-0">Content &copy; 2008-2019 Gavin Wray<br />
+      <a href="https://github.com/broccolini/athena">Athena theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
+    <p class="right clearfix sm-width-full py-2 mb-2 mb-lg-0"><a href="https://twitter.com/gavinwray">Twitter</a> &middot; <a href="https://www.linkedin.com/in/gavinwray/">LinkedIn</a> &middot; <a href="https://soundcloud.com/finalpilots">SoundCloud</a> &middot; <a href="https://github.com/gavinwray">GitHub</a></p>
+  </div>
+</div>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A content strategy to manage web services documentation by Gavin Wray</title>
+  <meta name="description" content="In late 2017 I was asked to write a strategy on how to manage and produce support documentation for the University of Warwick’s web publishing team, which de...">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
+
+  <link rel="canonical" href="http://localhost:4000/2018/12/20/content-strategy-for-documentation/">
+  <link rel="alternate" type="application/rss+xml" title="Hi, I’m Gavin, a content designer" href="http://localhost:4000/feed.xml">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+  
+  <!-- font-smoothing is only applied on dark themes -->
+  <body class="font-smoothing">
+
+    <header class="px-2 clearfix">
+
+  <div class="right left-lg absolute-lg right-0 top-0">
+    <ul class="mt-2 mt-lg-2 mr-0 mr-lg-3">
+      <li class="inline-block text-right ml-2 ml-lg-0">
+        <a class="h5" href="/">
+          Home
+        </a>
+      </li>
+      
+        
+      
+        
+        <li class="inline-block text-right ml-1 ml-lg-3">
+          <a class="h5" href="/about/">
+            About me
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+
+  <div class="right-lg absolute-lg left-0 top-0 sm-width-full mt-2">
+      <span class="inline-block h5 bold ml-0 ml-lg-3">
+        <a href="http://localhost:4000">Gavin Wray</a>
+      </span>
+  </div>
+
+</header>
+
+
+    <div>
+      <article class="container mx-auto px-2" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="mt-4 mb-2 clearfix header-text">
+    <h1 class="h1 lh-condensed inline-block py-2 mt-4 header-title">A content strategy to manage web services documentation</h1>
+    <div class="clearfix mb-4 py-1">
+      <p class="h5 lh-condensed"><time datetime="2018-12-20T00:00:00+00:00" itemprop="datePublished">20 December 2018</time></p>
+      <div class="col-1 sm-width-full border-top-thick">
+      </div>
+    </div>
+  </div>
+
+  <div class="prose py-4" itemprop="articleBody">
+      <p>In late 2017 I was asked to write a strategy on how to manage and produce support documentation for the University of Warwick’s web publishing team, which develops web and mobile applications in-house.</p>
+
+<p>The number of web applications had increased since I joined Warwick in 2012. Help pages were in large banks of FAQs (frequently asked questions). Over time, they had become difficult to navigate and keep up to date. After a successful trial to incorporate documentation work with the development cycle for one application during 2016-17, there was a successful model to follow. The challenge was to identify the scope of documentation work and how to scale up the trial to a full service of 17 applications.</p>
+
+<p>One year later, I cannot say that the strategy is fully realised and that the work is complete. Far from it, there’s a long way to go. The new model is working well though, and more applications are now in the fold.</p>
+
+<p>In this post, I break down how I:</p>
+
+<ul>
+  <li>audited the scope and volume of the team’s documentation</li>
+  <li>researched the factors involved in creating high-quality documentation</li>
+  <li>introduced best practice from the <a href="https://www.writethedocs.org/">Write the Docs</a> community and GOV.UK’s <a href="https://www.gov.uk/service-manual">Service Design Manual</a></li>
+  <li>wrote the strategy</li>
+</ul>
+
+<p>To respect confidentiality, I have omitted product names, made job titles generic and paraphrased the strategy’s actual content.</p>
+
+<h2 id="why-write-a-content-strategy">Why write a content strategy</h2>
+
+<p>It’s quick to write a help article and post it online, right? ‘Write once, publish and forget’ is cheap and fast. It’s a poor experience for customers though when ungoverned content grows out of date. When a product evolves, but the support documentation does not, the result is bloated legacy articles that are:</p>
+
+<ul>
+  <li>inaccurate or obsolete</li>
+  <li>difficult for customers to navigate and use</li>
+  <li>difficult for writers to maintain</li>
+</ul>
+
+<p>In an agile development environment where product features change frequently, this decay in documentation accelerates.</p>
+
+<p>Each year or so you hit a bump. Without a content strategy for governance and maintenance – by that I mean <a href="https://www.braintraffic.com/blog/what-is-content-strategy">Kristina Halvorson’s original definition</a> of the discipline, not the term co-opted by content marketers – you generate <a href="https://18f.gsa.gov/2016/05/19/content-debt-what-it-is-where-to-find-it-and-how-to-prevent-it-in-the-first-place/">content debt</a>.</p>
+
+<p>Resolving the problem with a content audit and rewrite, for example, is expensive. It’s labour intensive to review legacy documentation, decide what to delete, what to rewrite, then do the actual writing. Also, there’s an opportunity cost. The review diverts writers from current or new products.</p>
+
+<p>Publishing quality documentation to help people use web applications is a significant investment. While writing may be the most visible element (the published page), accurate and timely documentation tailored to an audience is a collaborative effort.</p>
+
+<p>It relies on:</p>
+
+<ul>
+  <li>a culture of user-centred design and continuous improvement</li>
+  <li>a culture that values documentation</li>
+  <li>a commitment to making design, development and support information open and findable</li>
+  <li><a href="https://idratherbewriting.com/2018/10/24/technical-aptitude/">technical acuity</a> of non-programmers to learn, contextualise and explain how to use a product</li>
+  <li>dependable, efficient and appropriate publishing tools</li>
+</ul>
+
+<p>These require investment in leadership, skills and infrastructure, which all have a cost. If you intend to help people to use your products through quality documentation, you may as well plan how to do that rather than leaving it to chance.</p>
+
+<h2 id="benefits-and-outcomes">Benefits and outcomes</h2>
+
+<p>I started the strategy with a statement of intent:</p>
+
+<blockquote>
+  <p>For each service, we will produce and maintain support documentation that is: accurate; relevant; timely; appropriate to the audience; concise; accessible; and usable.</p>
+</blockquote>
+
+<p>Next, I outlined the benefits beyond providing a good user experience. These are the benefits that can potentially save money. The benefits include:</p>
+
+<ul>
+  <li>reducing the number of support calls</li>
+  <li>increasing capacity to refer customers to accurate, high-quality information</li>
+  <li>increasing capacity in the support team to reference information when responding to calls</li>
+  <li>making the workload to maintain documentation sustainable</li>
+  <li>reducing dependency on individuals and their availability</li>
+  <li>removing the need for periodic labour-intensive jobs to revise out-of-date documentation</li>
+</ul>
+
+<h2 id="discovery-part-1-scope-and-volume">Discovery part 1: scope and volume</h2>
+
+<p>Like a quantitative content audit, I started by identifying all the supported products, what documentation existed for each product and the number of help pages. The documentation included user guides, manuals and embedded help for user interfaces. To keep the scope sensible and to prioritise, I limited the research to user-facing documentation (material for students, staff and the public).</p>
+
+<p>I wanted to get a realistic sense of how often product features changed. The 2016-17 academic year <em>felt</em> busy, mainly due to launching a redesigned coursework management system and upgrading the University’s CMS user interface, but I wanted to check anecdotes against data.</p>
+
+<p>I reviewed historical data in <a href="https://www.atlassian.com/software/jira">Jira</a>, the team’s platform for development, for the supported products for a full academic year. Between October 2016 and September 2017 there were 133 version releases with an average of 11 version releases per month.</p>
+
+<p>An interesting fact from this analysis was that 80% of all bug fixes, improvements and feature changes were for two of the 17 supported products. One of these products was part of the trial for the new documentation model, a product that dominated the collaborative effort across development, support and documentation. Knowing that most of the other products changed less often, I felt more confident about scaling up the documentation model to the remaining products.</p>
+
+<p>Writing this post one year later, my confidence was premature. Scaling has turned out to be the most challenging part of implementing the strategy!</p>
+
+<h2 id="discovery-part-2-mapping-information-flow">Discovery part 2: mapping information flow</h2>
+
+<p>Technical writers or content designers need writing skills. That’s a given. What job descriptions do not always reflect or value appropriately, in my experience, is the ability to seek information from different sources, to make sense of it all and to keep track methodically.</p>
+
+<p>Writing support documentation is a messy environment. Sometimes there are no definitive answers. There may not be an agreed, coherent picture for a writer to start work. Requirements and features change.</p>
+
+<p>Writers need to be able to:</p>
+
+<ul>
+  <li>hunt down information, verify statements and cross-check information sources</li>
+  <li>have enough technical acuity to learn how to use a product for themselves</li>
+  <li>connect with the right people to confirm their understanding</li>
+  <li>navigate internal politics</li>
+  <li>seek constructive criticism</li>
+</ul>
+
+<p>It’s crucial for a documentation writer to connect to sources of information for the requirements and future development. Without it, they risk not having enough domain knowledge to write about a product in the user’s context or add value from a position of expertise. I’m lucky at Warwick in that I work in the same team as those who design, build and support the products. I sympathise with writers located in teams far from where product design decisions happen.</p>
+
+<p>For the strategy, I mapped the flow of product information through the web publishing service from its origins, through UX design, development, testing and launch.</p>
+
+<p><img src="/assets/2018/12/information-flow-generic.png" alt="Information flow diagram" /></p>
+
+<p>Writing down each source helped me to identify situations where:</p>
+
+<ul>
+  <li>I was already involved</li>
+  <li>I was not involved but should take part</li>
+  <li>I was not involved and needed to connect with the relevant person at that level</li>
+</ul>
+
+<p>Seeing the process visually helped to identify where and when to incorporate the documentation tasks. The diagram shows where the information for support documentation work comes from, how it’s captured in Jira and how support material gets published.</p>
+
+<p>The flow should ensure that:</p>
+
+<ul>
+  <li>relevant information is available to developers and documentation writers</li>
+  <li>documentation creators can collaborate with developers in a shared environment (Jira)</li>
+  <li>changes to existing functionality have an accompanying documentation task</li>
+  <li>user interface copy and documentation are consistent in content and tone</li>
+  <li>documentation reviews do not delay releases unnecessarily</li>
+  <li>the quality of information for customers improves continuously</li>
+</ul>
+
+<h2 id="discovery-part-3-identifying-documentation-job-types">Discovery part 3: identifying documentation job types</h2>
+
+<p>To get a sense of the different natures of content jobs for the service’s documentation, I plotted job types against volume in a typical academic year and the complexity of writing.</p>
+
+<p><img src="/assets/2018/12/job-types-genericised.png" alt="Documentation job types" /></p>
+
+<p>By following the strategy, my intentions were for:</p>
+
+<ul>
+  <li>‘Audit and refresh out of date or legacy content’ to move to the ‘Low volume’ side</li>
+  <li>‘Maintain documentation in line with version releases’ to become the norm for all supported products</li>
+</ul>
+
+<p>As a result, there would be more capacity to put effort into creating high-quality, original material for new products or significant updates. Killing off those bi-annual, labour-intensive projects (paying down the content debt) would release time to focus elsewhere. It also boosts writers’ morale!</p>
+
+<h2 id="content-purpose">Content purpose</h2>
+
+<p>In this new strategy, every item of content must have a purpose. It must pass the following tests:</p>
+
+<ul>
+  <li>does the content enable the user to complete their task?</li>
+  <li>does the content solve a problem?</li>
+  <li>does the content increase the user’s understanding of the task and its context?</li>
+</ul>
+
+<p>Otherwise, there’s no need to write new content, which needs maintaining, or to keep existing content that does not serve a purpose. Stop, delete, move along.</p>
+
+<h2 id="context-and-value">Context and value</h2>
+
+<p>The documentation needs to do more than describe <em>how something works</em>. It should provide context and add value for users by:</p>
+
+<ul>
+  <li>explaining information that users may not discern on their own</li>
+  <li>describing the effects of one action beyond what the user may intend</li>
+  <li>highlighting issues for consideration such as prerequisites</li>
+  <li>offering tips on how to complete a task efficiently when there is more than one way to do it</li>
+</ul>
+
+<h2 id="content-depth">Content depth</h2>
+
+<p>Next, I wanted to define the level of detail required for each product’s documentation. For example, manuals document every feature. User guides help people to complete a task. This work still needs doing, but the aim is to:</p>
+
+<ul>
+  <li>commit resources on creating documentation that serves a purpose</li>
+  <li>reduce time spent on documentation that is of low value to customers or the team</li>
+</ul>
+
+<h2 id="content-types">Content types</h2>
+
+<p>Much of the legacy documentation was in the form of FAQs. While some content is a short answer to a common question, it’s rare that an <a href="https://alistapart.com/article/infrequently-asked-questions-of-faqs#section3">FAQ is the appropriate content type</a>. In most cases, the FAQ format causes problems and frustration for customers.</p>
+
+<p>In 2013 Sarah Richards blogged about <a href="https://gds.blog.gov.uk/2013/07/25/faqs-why-we-dont-have-them/">why the UK Government Digital Service don’t have FAQs</a>. Lisa Wright wrote <em>No More FAQs</em> for <a href="https://alistapart.com/article/no-more-faqs-create-purposeful-information-for-a-more-effective-user-experi">A List Apart</a> in 2018, in which she advocated for purposeful information instead. Gerry McGovern called FAQs the ‘<a href="http://gerrymcgovern.com/faqs-are-the-dinosaurs-of-web-navigation/">dinosaurs of web navigation</a>’, and renowned usability expert Jakob Nielsen included FAQs in <a href="https://www.nngroup.com/articles/top-ten-web-design-mistakes-of-2002/">top 10 web design mistakes of 2002</a>.</p>
+
+<p>For me, the problems with Warwick’s FAQs were:</p>
+
+<ul>
+  <li>increasing difficulty for customers to find information</li>
+  <li>pages that documented features without context, rather than focusing on a task</li>
+  <li>a maintenance overhead to periodically review and update large banks of FAQs</li>
+</ul>
+
+<p>In the strategy, I defined the content types to use for help documentation. Each type accounts for the audience’s needs and technical skill level. For example:</p>
+
+<ul>
+  <li><strong>UI help text</strong> - ‘show don’t tell’ with an example in microcopy instead of a detailed explanation</li>
+  <li><strong>Help article</strong> - a single page of step-by-step instructions that helps the user to complete a task or solve a problem</li>
+  <li><strong>User guide</strong> - a linear sequence of pages to walk the reader through a process</li>
+</ul>
+
+<h2 id="roles">Roles</h2>
+
+<p>I mapped the roles necessary for producing documentation against the activities involved. The aim was to get clarity on who is responsible for activities. The role map could potentially help define skills for any future recruitment. (This table does not list all the activities and I’ve made the role titles generic.)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Activity</th>
+      <th>Product manager</th>
+      <th>Lead developer</th>
+      <th>Developer</th>
+      <th>Senior writer</th>
+      <th>Writer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Manage the service. Communicate changes and developments to developers and writers.</td>
+      <td>x</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>High-level technical knowledge of the product.</td>
+      <td> </td>
+      <td>x</td>
+      <td>x</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Medium-level technical knowledge of the product.</td>
+      <td>x</td>
+      <td> </td>
+      <td> </td>
+      <td>x</td>
+      <td>x</td>
+    </tr>
+    <tr>
+      <td>Scope the documentation requirements.</td>
+      <td>x</td>
+      <td> </td>
+      <td> </td>
+      <td>x</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Design and maintain the information architecture for documentation.</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>x</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Create a significant volume of new documentation.</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>x</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Write new pages or update existing pages to be technically accurate and follow the house style, as assigned.</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>x</td>
+      <td>x</td>
+    </tr>
+    <tr>
+      <td>Answer technical queries and take part in content critiques.</td>
+      <td>x</td>
+      <td>x</td>
+      <td>x</td>
+      <td>x</td>
+      <td>x</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="processes">Processes</h2>
+
+<p>This section makes the following activities concrete and specifies the role responsible for each activity:</p>
+
+<ul>
+  <li>what to do for a product version release</li>
+  <li>what to do each week and month to maintain the documentation</li>
+  <li>what to do for large projects such as documenting a new product from scratch</li>
+</ul>
+
+<h2 id="knowledge-transfer-and-reference-materials">Knowledge transfer and reference materials</h2>
+
+<p>This section listed Warwick’s internal guides for documentation writers:</p>
+
+<ul>
+  <li>a glossary of agreed terms</li>
+  <li>guidance on how to write for the web</li>
+  <li>training notes on how to write a help article</li>
+</ul>
+
+<p>Rather than recreate style guides from scratch, the team uses these external resources:</p>
+
+<ul>
+  <li><a href="https://docs.microsoft.com/en-gb/style-guide/welcome/">Microsoft Writing Style Guide</a></li>
+  <li><a href="https://developers.google.com/style/">Google Developer Documentation Guide</a></li>
+  <li><a href="https://www.gov.uk/service-manual/design/writing-for-user-interfaces">GOV.UK’s ‘Writing for User Interfaces’</a></li>
+  <li><a href="https://en.oxforddictionaries.com/">English Oxford Dictionary</a></li>
+</ul>
+
+<p>Microsoft’s <em>Writing Style Guide</em> is a great resource and it’s comprehensive. It replaces the <em>Microsoft Manual of Style</em>, a 20-year-old print publication. While the <em>Google Developer Documentation Guide</em> considers API documentation for a developer audience, it contains lots of examples on how to write for non-developer audiences.</p>
+
+<p>The GDS team at GOV.UK have published their design thinking and references online for years. Their <a href="https://www.gov.uk/service-manual">Service Design Manual</a>, which <em>Writing for User Interfaces</em> is part of, contains useful information for any organisation to produce their documentation in a modern, user-centred way.</p>
+
+<h2 id="one-year-later">One year later</h2>
+
+<p>The biggest challenge I’m thinking about now is how to scale the successful documentation model to more products. Writing a strategy is one thing. Putting it into practice is another.</p>
+
+<p>Another aspect not covered in the strategy is how to evaluate the documentation’s quality or gaps through user research and feedback. Mechanisms do exist to capture feedback through the web publishing service’s approach to continuous improvement, which tends to be feedback when someone gets stuck. It’s unusual to hear about the times when someone used a help article successfully or where the gaps lie.</p>
+
+<p>There’s plenty more to do. After using the strategy for one year though, the documentation is in a much better position.</p>
+
+  </div>
+</article>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  <!-- Use if you want to show previous and next for all posts. -->
+
+
+
+  <div class="col-5 sm-width-full left mr-lg-4 mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2018/06/17/refactor-hugo-theme-stylesheet/">
+      <span>Previous article</span>
+      <p class="bold h5 lh-condensed mb-1">Refactoring a Hugo theme's stylesheet</p>
+    </a>
+  </div>
+  
+  
+  <div class="col-5 sm-width-full left mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2019/03/02/accessibility-regulations/">
+      <span>Next article</span>
+      <p class="bold h5 lh-condensed mb-1">Accessibility regulations, university websites and decentralised publishing</p>
+    </a>
+  </div>
+
+
+</div>
+
+    </div>
+
+    <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
+  <div class="border-top-thick">
+    <p class="col-6 sm-width-full left py-2 mb-0">Content &copy; 2008-2019 Gavin Wray<br />
+      <a href="https://github.com/broccolini/athena">Athena theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
+    <p class="right clearfix sm-width-full py-2 mb-2 mb-lg-0"><a href="https://twitter.com/gavinwray">Twitter</a> &middot; <a href="https://www.linkedin.com/in/gavinwray/">LinkedIn</a> &middot; <a href="https://soundcloud.com/finalpilots">SoundCloud</a> &middot; <a href="https://github.com/gavinwray">GitHub</a></p>
+  </div>
+</div>
+
+
+  </body>
+
+</html>

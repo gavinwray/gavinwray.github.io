@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Designing with grids by Gavin Wray</title>
+  <meta name="description" content="With my new portfolio design finished and live, it’s time to catch up on writing posts. This post documents the design process I worked through in creating t...">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
+
+  <link rel="canonical" href="http://localhost:4000/2010/06/16/designing-with-grids/">
+  <link rel="alternate" type="application/rss+xml" title="Hi, I’m Gavin, a content designer" href="http://localhost:4000/feed.xml">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+  
+  <!-- font-smoothing is only applied on dark themes -->
+  <body class="font-smoothing">
+
+    <header class="px-2 clearfix">
+
+  <div class="right left-lg absolute-lg right-0 top-0">
+    <ul class="mt-2 mt-lg-2 mr-0 mr-lg-3">
+      <li class="inline-block text-right ml-2 ml-lg-0">
+        <a class="h5" href="/">
+          Home
+        </a>
+      </li>
+      
+        
+      
+        
+        <li class="inline-block text-right ml-1 ml-lg-3">
+          <a class="h5" href="/about/">
+            About me
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+
+  <div class="right-lg absolute-lg left-0 top-0 sm-width-full mt-2">
+      <span class="inline-block h5 bold ml-0 ml-lg-3">
+        <a href="http://localhost:4000">Gavin Wray</a>
+      </span>
+  </div>
+
+</header>
+
+
+    <div>
+      <article class="container mx-auto px-2" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="mt-4 mb-2 clearfix header-text">
+    <h1 class="h1 lh-condensed inline-block py-2 mt-4 header-title">Designing with grids</h1>
+    <div class="clearfix mb-4 py-1">
+      <p class="h5 lh-condensed"><time datetime="2010-06-16T00:00:00+01:00" itemprop="datePublished">16 June 2010</time></p>
+      <div class="col-1 sm-width-full border-top-thick">
+      </div>
+    </div>
+  </div>
+
+  <div class="prose py-4" itemprop="articleBody">
+      <p>With my new portfolio design finished and live, it’s time to catch up on writing posts. This post documents the design process I worked through in creating this website.</p>
+
+<p>As I mentioned in my last <a href="/2010/04/27/an-update-on-what-im-doing/">update on what I’m doing</a>, I wanted to develop my design knowledge and put it into practice. I spent some time studying grid layouts and typography, getting stuck into two books in particular:</p>
+
+<ul>
+  <li><a href="http://www.amazon.co.uk/gp/product/1568984650?&amp;tag=gavwra-21">Grid Systems: Principles of Organizing Type</a> by Kimberly Elam</li>
+  <li><a href="http://fivesimplesteps.com/books/practical-guide-designing-for-the-web">A Practical Guide to Designing for the Web</a> by <a href="http://www.markboulton.co.uk/">Mark Boulton</a></li>
+</ul>
+
+<p>These two books forced me to consider the portfolio layout in detail. Elam’s book is quite theoretical, which is a good thing when you’re learning a new subject. Boulton’s bookhelped me consider the grid theory in terms of the web.</p>
+
+<p><img src="/assets/2010/06/elam-grid-overlay-540.jpg" alt="Red grid overlaid on a poster for the Institute for Architecture and Urban Studies" /></p>
+
+<p>Page 43, Kimberley Elam’s <em>Grid Systems</em></p>
+
+<p>Boulton’s chapter on layout helped me to consider grid layouts that work aesthetically yet always keeping in mind that I’d eventually have to turn the grid design into code for a WordPress theme.</p>
+
+<p><img src="/assets/2010/06/boulton-grid-layout-540.jpg" alt="Mark Boulton's grid layout for De Staandard website" /></p>
+
+<p>Page 235 in Mark Boulton’s <em>A Practical Guide to Designing for the Web</em></p>
+
+<p>To work through this process, I chose the <a href="http://960.gs/">grid960.gs system</a>. This contains sketch sheets, an HTML layout generator and CSS with consistent measurements to help streamline web development from design through to coding.</p>
+
+<h2 id="sketching">Sketching</h2>
+
+<p>With a content plan for the portfolio already in place, my first step was to sketch the content type templates using <a href="http://github.com/nathansmith/960-Grid-System/tree/master/sketch_sheets/">Nathan Smith’s sketch sheets</a>:</p>
+
+<ul>
+  <li>home page</li>
+  <li>about page</li>
+  <li>portfolio index</li>
+  <li>portfolio item</li>
+  <li>blog index</li>
+  <li>blog post</li>
+  <li>contact</li>
+</ul>
+
+<p><img src="/assets/2010/06/home-page-sketch-540.png" alt="Sketch of home page using a 12 column grid" /></p>
+
+<p>Home page sketch (<a href="http://www.flickr.com/photos/gavinwray/4707084254/">view full size image on flickr</a>)</p>
+
+<p><img src="/assets/2010/06/project-detail-sketch-540.png" alt="4 sketches of portfolio item template" /></p>
+
+<p>Portfolio item sketches (<a href="http://www.flickr.com/photos/gavinwray/4707087866/">view full size image on flickr</a>)</p>
+
+<h2 id="wireframes">Wireframes</h2>
+
+<p>Next, I grabbed the 12-column <a href="http://github.com/nathansmith/960-Grid-System/tree/master/templates/photoshop/">960 template psd</a>, opened it in <a href="http://www.pixelmator.com/">Pixelmator</a> and drew wireframes of each page template.</p>
+
+<p>Back using Boulton’s chapter on layout, I used his advice on the <a href="http://en.wikipedia.org/wiki/Rule_of_thirds">rule of thirds</a>:</p>
+
+<blockquote>
+  <p>“Photographers have used the Rule of Thirds for years, who borrowed it from, yet again, classical artists and architects. The theory is simple – which is why it’s easy to apply in your day-to-day design work. Divide any workspace, or layout, into thirds horizontally and vertically, and align key focus points of your composition to where the lines intersect.”</p>
+</blockquote>
+
+<p>A web design at 960px wide breaks nicely into three columns of 320px each. With a 10px gutter either side of each column, you now have 300px wide blocks for the content, which, again, is a perfect number to further sub-divide by three (giving 100px blocks).</p>
+
+<p>In this closeup of the home page’s top left corner, I used the rule of thirds on the horizontal spacing. You can see the different elements (title, navigation bar, summary text in bold and the call to actions) aligned to the grid at units of 50 or 100 pixels.</p>
+
+<p><img src="/assets/2010/06/home-wireframe-grid-overlay.png" alt="Home page wireframe with grid overlay showing alignment of key sections based on the rule of thirds" /></p>
+
+<p>You can also see the content blocks on the portfolio page arranged in three columns, each block 300px wide and 300px high:</p>
+
+<p><img src="/assets/2010/06/folio-grid-overlay.png" alt="Portfolio index wireframe with grid overlay - the content boxes are 300 pixels wide" /></p>
+
+<h2 id="summary">Summary</h2>
+
+<p>You may wonder why it’s worth going through this detailed grid design process. Is it too detailed? Should you fire up your image editor and just dive in?</p>
+
+<p>Everyone has different ways of working. This is a personal braindump of the thought processes I’ve worked through. I think using grids is a valuable exercise, particularly if you find the visual side of web design difficult.</p>
+
+<p>By using grids to focus purely on layout, alignment and white space, you simplify the visual design process. Separating layout from colour and typography reduces the number of design elements and choices to make at once. You can see the effect of small changes more easily and adjust as you work.</p>
+
+<p>Ever have those times when you stare at your design and think ‘this doesn’t look right’ but you don’t know why? Focusing on layout and white space makes it easier to deal with these problems. Something doesn’t feel right? Check your units of measurement and re-align. Does it ‘feel’ better now?</p>
+
+<p>An organised layout based on grids, using consistent measurements, can begin to feel like a good web design, even before you introduce colour and type.</p>
+
+  </div>
+</article>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  <!-- Use if you want to show previous and next for all posts. -->
+
+
+
+  <div class="col-5 sm-width-full left mr-lg-4 mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2010/06/15/new-portfolio-design-launched/">
+      <span>Previous article</span>
+      <p class="bold h5 lh-condensed mb-1">New portfolio redesign</p>
+    </a>
+  </div>
+  
+  
+  <div class="col-5 sm-width-full left mt-3">
+    <a class="py-1 block" href="http://localhost:4000/2010/08/09/mps-ethical-email-and-social-media-surgeries/">
+      <span>Next article</span>
+      <p class="bold h5 lh-condensed mb-1">MPs, ethical email and social media surgeries</p>
+    </a>
+  </div>
+
+
+</div>
+
+    </div>
+
+    <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
+  <div class="border-top-thick">
+    <p class="col-6 sm-width-full left py-2 mb-0">Content &copy; 2008-2019 Gavin Wray<br />
+      <a href="https://github.com/broccolini/athena">Athena theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
+    <p class="right clearfix sm-width-full py-2 mb-2 mb-lg-0"><a href="https://twitter.com/gavinwray">Twitter</a> &middot; <a href="https://www.linkedin.com/in/gavinwray/">LinkedIn</a> &middot; <a href="https://soundcloud.com/finalpilots">SoundCloud</a> &middot; <a href="https://github.com/gavinwray">GitHub</a></p>
+  </div>
+</div>
+
+
+  </body>
+
+</html>

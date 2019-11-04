@@ -9,7 +9,7 @@ home_title_meta: Gavin Wray - Content designer # populates the <title> tag
 description: I help organisations to improve their digital content with clear language and user-centred thinking # displayed on home page
 
 # baseurl: "/athena" # the subpath of your site, e.g. /blog
-url: "https://gavinwray.com" # the base hostname & protocol for your site
+url: "https://gavinwray.github.io" # the base hostname & protocol for your site
 github_repo: athena # the GitHub repo name for your project
 github_username: gavinwray
 language: en

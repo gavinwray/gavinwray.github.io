@@ -25,5 +25,8 @@ remote_theme: gavinwray/athena
 social_link: twitter
 social_username: gavinwray
 
+# Google Analytics tracking ID UA-XXXXXXX-X
+google_analytics: UA—1414709-1
+
 # Build settings
 markdown: kramdown

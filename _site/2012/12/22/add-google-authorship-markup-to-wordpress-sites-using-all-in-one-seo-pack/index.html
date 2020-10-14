@@ -85,7 +85,7 @@
 
 <p><img src="/assets/2012/12/authors-in-google-search-results.png" alt="Authors in Google search results with photos" /></p>
 
-<p>Authorship markup describes the relationship between a piece of content and its author semantically. This helps search engines to identify the author’s work wherever it appears online. In practice, this means explicitly linking your Google+ profile to your content using <code class="highlighter-rouge">rel="author"</code>.</p>
+<p>Authorship markup describes the relationship between a piece of content and its author semantically. This helps search engines to identify the author’s work wherever it appears online. In practice, this means explicitly linking your Google+ profile to your content using <code class="language-plaintext highlighter-rouge">rel="author"</code>.</p>
 
 <h2 id="connect-your-sites-to-your-google-profile">Connect your sites to your Google+ profile</h2>
 
@@ -110,11 +110,11 @@
 
 <h2 id="add-authorship-markup-to-a-single-author-wordpress-site">Add authorship markup to a single-author WordPress site</h2>
 
-<p>After reading lengthy guides by <a href="http://searchengineland.com/the-definitive-guide-to-google-authorship-markup-123218">Rick DeJarnette</a> and <a href="http://designfestival.com/add-rich-snippet-support-in-wordpress-and-dominate-your-personal-brand/">Tara Horner</a>, adding authorship markup seems too complex a process. For WordPress themes, Tara explains editing the post and author page templates to include <code class="highlighter-rouge">rel="author"</code> on the post author name anchor, and linking the author’s name to her Google+ profile.</p>
+<p>After reading lengthy guides by <a href="http://searchengineland.com/the-definitive-guide-to-google-authorship-markup-123218">Rick DeJarnette</a> and <a href="http://designfestival.com/add-rich-snippet-support-in-wordpress-and-dominate-your-personal-brand/">Tara Horner</a>, adding authorship markup seems too complex a process. For WordPress themes, Tara explains editing the post and author page templates to include <code class="language-plaintext highlighter-rouge">rel="author"</code> on the post author name anchor, and linking the author’s name to her Google+ profile.</p>
 
 <p>This doesn’t suit my purposes.</p>
 
-<p>Firstly, I’m the only person writing on this site. This is a ‘single-author WordPress blog’ and it’s obvious to readers I write all the posts. To change the post metadata to include my name, and link it to my Google+ profile, just so I can add <code class="highlighter-rouge">rel="author"</code> seems daft. That would mean changing the post metadata from:</p>
+<p>Firstly, I’m the only person writing on this site. This is a ‘single-author WordPress blog’ and it’s obvious to readers I write all the posts. To change the post metadata to include my name, and link it to my Google+ profile, just so I can add <code class="language-plaintext highlighter-rouge">rel="author"</code> seems daft. That would mean changing the post metadata from:</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Carefully posted on 15th December 2012
 </code></pre></div></div>
@@ -144,7 +144,7 @@
     <p>Scroll to the bottom of the All in One SEO settings and click <strong>Update Options</strong>.</p>
   </li>
   <li>
-    <p>Visit any page on your website and view the source HTML. Notice the following line in the <code class="highlighter-rouge">head</code> section:</p>
+    <p>Visit any page on your website and view the source HTML. Notice the following line in the <code class="language-plaintext highlighter-rouge">head</code> section:</p>
 
     <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"https://plus.google.com/u/1/109382002866848246485"</span> <span class="nt">/&gt;</span>
 </code></pre></div>    </div>
@@ -176,7 +176,7 @@
     <p>Enter your Google+ profile URL and save your changes.</p>
   </li>
   <li>
-    <p>Visit any post or page <em>that you published on the site</em>, view the source HTML and you should see the markup in the <code class="highlighter-rouge">&lt;head&gt;</code>:</p>
+    <p>Visit any post or page <em>that you published on the site</em>, view the source HTML and you should see the markup in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>:</p>
 
     <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"https://plus.google.com/u/1/109382002866848246485"</span> <span class="nt">/&gt;</span>
 </code></pre></div>    </div>
@@ -216,7 +216,7 @@
     <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
   <div class="border-top-thick">
     <p class="col-6 sm-width-full left py-2 mb-0">Content &copy; 2020 Gavin Wray<br />
-      <a href="https://github.com/broccolini/athena">Athena theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
+      <a href="https://github.com/broccolini/athena">Athena Jekyll theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
     <p class="right clearfix sm-width-full py-2 mb-2 mb-lg-0"><a href="https://twitter.com/gavinwray">Twitter</a> &middot; <a href="https://www.linkedin.com/in/gavinwray/">LinkedIn</a> &middot; <a href="https://soundcloud.com/finalpilots">SoundCloud</a> &middot; <a href="https://github.com/gavinwray">GitHub</a></p>
   </div>
 </div>

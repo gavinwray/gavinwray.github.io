@@ -79,9 +79,9 @@
 
 <ul>
   <li>full content so that readers do not have to leave their RSS client</li>
-  <li>most recent 15 posts in the <code class="highlighter-rouge">/blog</code> directory</li>
+  <li>most recent 15 posts in the <code class="language-plaintext highlighter-rouge">/blog</code> directory</li>
   <li>my name as the feed title</li>
-  <li>the descriptive URL <code class="highlighter-rouge">/feed.xml</code></li>
+  <li>the descriptive URL <code class="language-plaintext highlighter-rouge">/feed.xml</code></li>
 </ul>
 
 <p>To create a similar feed for your Hugo site, follow these steps:</p>
@@ -94,20 +94,20 @@
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>Copy the Hugo <a href="https://gohugo.io/templates/rss/#the-embedded-rss-xml">RSS template</a> and paste it in <code class="highlighter-rouge">rss.xml</code>.</p>
+    <p>Copy the Hugo <a href="https://gohugo.io/templates/rss/#the-embedded-rss-xml">RSS template</a> and paste it in <code class="language-plaintext highlighter-rouge">rss.xml</code>.</p>
   </li>
   <li>
-    <p>In my site’s <code class="highlighter-rouge">config</code> file, I declare my name in the <code class="highlighter-rouge">author</code> parameter. To use the same parameter as the feed title, in <code class="highlighter-rouge">rss.xml</code> change the feed’s <code class="highlighter-rouge">&lt;title&gt;</code> tag to:</p>
+    <p>In my site’s <code class="language-plaintext highlighter-rouge">config</code> file, I declare my name in the <code class="language-plaintext highlighter-rouge">author</code> parameter. To use the same parameter as the feed title, in <code class="language-plaintext highlighter-rouge">rss.xml</code> change the feed’s <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> tag to:</p>
 
-    <div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="x"> </span><span class="o">&lt;</span><span class="n">channel</span><span class="o">&gt;</span><span class="x">
- </span><span class="o">...</span><span class="x">
-   </span><span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="p">{{</span><span class="x"> </span><span class="err">$</span><span class="o">.</span><span class="n">Site</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">author</span><span class="x"> </span><span class="p">}}</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span><span class="x">
- </span><span class="o">...</span><span class="x">
- </span><span class="o">&lt;/</span><span class="n">channel</span><span class="o">&gt;</span><span class="x">
-</span></code></pre></div>    </div>
+    <div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">&lt;</span><span class="n">channel</span><span class="o">&gt;</span>
+ <span class="o">...</span>
+   <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="p">{{</span> <span class="err">$</span><span class="o">.</span><span class="n">Site</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">author</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+ <span class="o">...</span>
+ <span class="o">&lt;/</span><span class="n">channel</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
   </li>
   <li>
-    <p>For consistency with the feed title, simplify the channel’s <code class="highlighter-rouge">&lt;description&gt;</code>:</p>
+    <p>For consistency with the feed title, simplify the channel’s <code class="language-plaintext highlighter-rouge">&lt;description&gt;</code>:</p>
 
     <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;channel&gt;</span>
  ...
@@ -119,16 +119,16 @@
   <li>
     <p>By default, Hugo publishes all items in the feed:</p>
 
-    <div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="x"> </span><span class="p">{{</span><span class="x"> </span><span class="k">range</span><span class="x"> </span><span class="o">.</span><span class="n">Data</span><span class="o">.</span><span class="n">Pages</span><span class="x"> </span><span class="p">}}</span><span class="x">
-</span></code></pre></div>    </div>
+    <div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="p">{{</span> <span class="k">range</span> <span class="o">.</span><span class="n">Data</span><span class="o">.</span><span class="n">Pages</span> <span class="p">}}</span>
+</code></pre></div>    </div>
 
-    <p>To show the most recent 15 items and to constrain items to those in one directory, for example, <code class="highlighter-rouge">/blog</code>, change the <code class="highlighter-rouge">range</code> to:</p>
+    <p>To show the most recent 15 items and to constrain items to those in one directory, for example, <code class="language-plaintext highlighter-rouge">/blog</code>, change the <code class="language-plaintext highlighter-rouge">range</code> to:</p>
 
-    <div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="x"> </span><span class="p">{{</span><span class="x"> </span><span class="k">range</span><span class="x"> </span><span class="n">first</span><span class="x"> </span><span class="m">15</span><span class="x"> </span><span class="p">(</span><span class="n">where</span><span class="x"> </span><span class="o">.</span><span class="n">Data</span><span class="o">.</span><span class="n">Pages</span><span class="x"> </span><span class="s">"Section"</span><span class="x"> </span><span class="s">"blog"</span><span class="p">)</span><span class="x"> </span><span class="p">}}</span><span class="x">
-</span></code></pre></div>    </div>
+    <div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="p">{{</span> <span class="k">range</span> <span class="n">first</span> <span class="m">15</span> <span class="p">(</span><span class="n">where</span> <span class="o">.</span><span class="n">Data</span><span class="o">.</span><span class="n">Pages</span> <span class="s">"Section"</span> <span class="s">"blog"</span><span class="p">)</span> <span class="p">}}</span>
+</code></pre></div>    </div>
   </li>
   <li>
-    <p>To show the item’s full content in the feed, change the item’s <code class="highlighter-rouge">&lt;description&gt;</code> to:</p>
+    <p>To show the item’s full content in the feed, change the item’s <code class="language-plaintext highlighter-rouge">&lt;description&gt;</code> to:</p>
 
     <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;item&gt;</span>
  ...
@@ -138,7 +138,7 @@
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>Hugo renders the feed at <code class="highlighter-rouge">/index.xml</code> by default. You can specify your own URL in your <code class="highlighter-rouge">config</code> file. For example, <code class="highlighter-rouge">feed</code>:</p>
+    <p>Hugo renders the feed at <code class="language-plaintext highlighter-rouge">/index.xml</code> by default. You can specify your own URL in your <code class="language-plaintext highlighter-rouge">config</code> file. For example, <code class="language-plaintext highlighter-rouge">feed</code>:</p>
 
     <div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nn">[outputs]</span>
    <span class="py">home</span> <span class="p">=</span> <span class="p">[</span> <span class="s">"HTML"</span><span class="p">,</span> <span class="s">"RSS"</span> <span class="p">]</span>
@@ -186,7 +186,7 @@
     <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
   <div class="border-top-thick">
     <p class="col-6 sm-width-full left py-2 mb-0">Content &copy; 2020 Gavin Wray<br />
-      <a href="https://github.com/broccolini/athena">Athena theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
+      <a href="https://github.com/broccolini/athena">Athena Jekyll theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
     <p class="right clearfix sm-width-full py-2 mb-2 mb-lg-0"><a href="https://twitter.com/gavinwray">Twitter</a> &middot; <a href="https://www.linkedin.com/in/gavinwray/">LinkedIn</a> &middot; <a href="https://soundcloud.com/finalpilots">SoundCloud</a> &middot; <a href="https://github.com/gavinwray">GitHub</a></p>
   </div>
 </div>

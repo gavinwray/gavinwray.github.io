@@ -99,7 +99,7 @@
   <li>Open a Finder window.</li>
   <li>Go to <strong>Applications &gt; Utilities</strong>. The Terminal application is in here.</li>
   <li>Double-click on Terminal to open it. The Terminal application looks like a text editor.</li>
-  <li>In the new Terminal window, type <code class="highlighter-rouge">python</code>. You should now see something like this:</li>
+  <li>In the new Terminal window, type <code class="language-plaintext highlighter-rouge">python</code>. You should now see something like this:</li>
 </ol>
 
 <p><img src="/assets/2012/09/terminal-install-python.png" alt="Screenshot of Terminal: install Python" /></p>
@@ -120,13 +120,13 @@
 
 <h2 id="full-script-for-get-weather-datapy">Full script for get-weather-data.py</h2>
 
-<p>This is where I got stuck. Beautiful Soup has changed since the book was published in 2011. The first two lines of code in Yau’s <code class="highlighter-rouge">get-weather-data.py</code> file are:</p>
+<p>This is where I got stuck. Beautiful Soup has changed since the book was published in 2011. The first two lines of code in Yau’s <code class="language-plaintext highlighter-rouge">get-weather-data.py</code> file are:</p>
 
 <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">urllib2</span>
 <span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 </code></pre></div></div>
 
-<p>This does not work with Beautiful Soup version 4 onwards. Thankfully, I found <a href="http://stackoverflow.com/a/9877397/722673">Dikei’s solution on Stackoverflow</a>. Change the second line in <code class="highlighter-rouge">get-weather-data.py</code> to:</p>
+<p>This does not work with Beautiful Soup version 4 onwards. Thankfully, I found <a href="http://stackoverflow.com/a/9877397/722673">Dikei’s solution on Stackoverflow</a>. Change the second line in <code class="language-plaintext highlighter-rouge">get-weather-data.py</code> to:</p>
 
 <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 </code></pre></div></div>
@@ -136,7 +136,7 @@
 <p>Page 37:</p>
 
 <blockquote>
-  <p>“The only thing left to do now is to run the code, which you do in your terminal using: <code class="highlighter-rouge">$ python get-weather-data.py</code>”</p>
+  <p>“The only thing left to do now is to run the code, which you do in your terminal using: <code class="language-plaintext highlighter-rouge">$ python get-weather-data.py</code>”</p>
 </blockquote>
 
 <p>Taking this literally, back in your Terminal window, you get an error message:</p>
@@ -149,7 +149,7 @@
 
 <ol>
   <li>In the Terminal menu, go to <strong>Shell &gt; New Window</strong>.</li>
-  <li>In the Terminal window, type <code class="highlighter-rouge">cd</code> followed by the path to the directory where you have saved your <code class="highlighter-rouge">get-weather-data.py</code> file. For example:</li>
+  <li>In the Terminal window, type <code class="language-plaintext highlighter-rouge">cd</code> followed by the path to the directory where you have saved your <code class="language-plaintext highlighter-rouge">get-weather-data.py</code> file. For example:</li>
 </ol>
 
 <pre><code class="language-txt">cd /Users/gavinwray/Documents/Books/Visualize-This-by-Nathan-Yau/Gavin/ch02/weather-scrape/beautifulsoup4-4.1.3
@@ -158,7 +158,7 @@
 <p>Now that’s a long path name and easy to make a typo with. Two things I learnt here that might save you frustration:</p>
 
 <ul>
-  <li>The <code class="highlighter-rouge">get-weather-data.py</code> script only runs if the path to the directory where it is saved does not contain spaces. For example, if you’ve got a directory called <code class="highlighter-rouge">/Visualize This/chapter 02/</code> in your file path, the script does not run.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">get-weather-data.py</code> script only runs if the path to the directory where it is saved does not contain spaces. For example, if you’ve got a directory called <code class="language-plaintext highlighter-rouge">/Visualize This/chapter 02/</code> in your file path, the script does not run.</li>
   <li>To save typing the full path, you can copy it by right-clicking on the directory name in Finder and choosing <strong>Copy</strong>. This copies the file path and you can paste it directly into your Terminal window. (Thanks <a href="http://max.woolf.io/">Max Woolf</a> for showing me this shortcut.)</li>
 </ul>
 
@@ -171,10 +171,10 @@
 <p>Page 37:</p>
 
 <blockquote>
-  <p>“It takes a little while to run, so be patient. In the process of running, your computer is essentially loading 365 pages, one for each day of 2009. You should have a file called <code class="highlighter-rouge">wunder-data.txt</code> in your working directory when the script is done running.”</p>
+  <p>“It takes a little while to run, so be patient. In the process of running, your computer is essentially loading 365 pages, one for each day of 2009. You should have a file called <code class="language-plaintext highlighter-rouge">wunder-data.txt</code> in your working directory when the script is done running.”</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">wunder-data.txt</code> was written to my directory immediately and the Terminal window appeared to hang, like this:</p>
+<p><code class="language-plaintext highlighter-rouge">wunder-data.txt</code> was written to my directory immediately and the Terminal window appeared to hang, like this:</p>
 
 <p><img src="/assets/2012/09/terminal-run-script.png" alt="Get weather data" /></p>
 
@@ -215,7 +215,7 @@
     <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
   <div class="border-top-thick">
     <p class="col-6 sm-width-full left py-2 mb-0">Content &copy; 2020 Gavin Wray<br />
-      <a href="https://github.com/broccolini/athena">Athena theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
+      <a href="https://github.com/broccolini/athena">Athena Jekyll theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
     <p class="right clearfix sm-width-full py-2 mb-2 mb-lg-0"><a href="https://twitter.com/gavinwray">Twitter</a> &middot; <a href="https://www.linkedin.com/in/gavinwray/">LinkedIn</a> &middot; <a href="https://soundcloud.com/finalpilots">SoundCloud</a> &middot; <a href="https://github.com/gavinwray">GitHub</a></p>
   </div>
 </div>

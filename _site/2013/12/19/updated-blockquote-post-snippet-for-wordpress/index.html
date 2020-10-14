@@ -77,10 +77,10 @@
 
 <p>The original snippet code relied on values for four variables:</p>
 
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nx">quote</span><span class="p">}</span>
-<span class="p">{</span><span class="nx">author</span><span class="p">}</span>
-<span class="p">{</span><span class="nx">source</span><span class="p">}</span>
-<span class="p">{</span><span class="nx">sourceurl</span><span class="p">}</span>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="n">quote</span><span class="p">}</span>
+<span class="p">{</span><span class="n">author</span><span class="p">}</span>
+<span class="p">{</span><span class="n">source</span><span class="p">}</span>
+<span class="p">{</span><span class="n">sourceurl</span><span class="p">}</span>
 </code></pre></div></div>
 
 <p>They combine to produce a blockquote that renders like this:</p>
@@ -93,22 +93,22 @@
 
 <h2 id="updated-snippet">Updated snippet</h2>
 
-<p><a href="http://anders.gressli.net/">Anders Gressli</a> kindly improved the snippet to omit unnecessary markup when a value for any variable is empty. For example, an empty anchor is omitted when you don’t specify a value for <code class="highlighter-rouge">{sourceurl}</code>.</p>
+<p><a href="http://anders.gressli.net/">Anders Gressli</a> kindly improved the snippet to omit unnecessary markup when a value for any variable is empty. For example, an empty anchor is omitted when you don’t specify a value for <code class="language-plaintext highlighter-rouge">{sourceurl}</code>.</p>
 
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="nx">php</span><span class="p">]</span>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">php</span><span class="p">]</span>
 <span class="k">echo</span> <span class="s1">'&lt;figure class="quote"&gt;'</span><span class="p">;</span>
 <span class="k">echo</span> <span class="s1">'&lt;blockquote&gt;"{quote}"&lt;/blockquote&gt;&lt;/figure&gt;'</span><span class="p">;</span> 
-<span class="c1">// the double quotation marks surrounding the quote text are aesthetic
-</span><span class="k">if</span><span class="p">(</span> <span class="s2">"</span><span class="si">{</span><span class="nv">author</span><span class="si">}</span><span class="s2">"</span><span class="p">){</span>
+<span class="c1">// the double quotation marks surrounding the quote text are aesthetic</span>
+<span class="k">if</span><span class="p">(</span> <span class="s2">"</span><span class="si">{</span><span class="nv">author</span><span class="si">}</span><span class="s2">"</span><span class="p">){</span>
   <span class="k">echo</span> <span class="s2">"&lt;figcaption&gt;</span><span class="si">{</span><span class="nv">author</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span>
     <span class="k">if</span><span class="p">(</span> <span class="s2">"</span><span class="si">{</span><span class="nv">sourcetitle</span><span class="si">}</span><span class="s2">"</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">){</span>
       <span class="k">if</span><span class="p">(</span> <span class="s2">"</span><span class="si">{</span><span class="nv">sourceurl</span><span class="si">}</span><span class="s2">"</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">){</span>
-        <span class="nv">$url_start</span> <span class="o">=</span> <span class="s1">'&lt;a href="'</span><span class="o">.</span><span class="s2">"&gt;';
+        <span class="nv">$url_start</span> <span class="o">=</span> <span class="s1">'&lt;a href="'</span><span class="mf">.</span><span class="s2">"&gt;';
         </span><span class="nv">$url_end</span><span class="s2"> = '&lt;/a&gt;';
       }
-      echo "</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">cite</span><span class="o">&gt;</span><span class="s2">".</span><span class="nv">$url_start</span><span class="s2">."</span><span class="p">{</span><span class="nx">sourcetitle</span><span class="p">}</span><span class="s2">".</span><span class="nv">$url_end</span><span class="s2">."</span><span class="o">&lt;/</span><span class="nx">cite</span><span class="o">&gt;</span><span class="s2">";
+      echo "</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">cite</span><span class="o">&gt;</span><span class="s2">".</span><span class="nv">$url_start</span><span class="s2">."</span><span class="p">{</span><span class="n">sourcetitle</span><span class="p">}</span><span class="s2">".</span><span class="nv">$url_end</span><span class="s2">."</span><span class="o">&lt;/</span><span class="n">cite</span><span class="o">&gt;</span><span class="s2">";
     }
-    echo "</span><span class="o">&lt;/</span><span class="nx">figcaption</span><span class="o">&gt;</span><span class="s2">";
+    echo "</span><span class="o">&lt;/</span><span class="n">figcaption</span><span class="o">&gt;</span><span class="s2">";
   }
 echo '&lt;/figure&gt;';
 [/php]
@@ -218,7 +218,7 @@ echo '&lt;/figure&gt;';
     <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
   <div class="border-top-thick">
     <p class="col-6 sm-width-full left py-2 mb-0">Content &copy; 2020 Gavin Wray<br />
-      <a href="https://github.com/broccolini/athena">Athena theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
+      <a href="https://github.com/broccolini/athena">Athena Jekyll theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
     <p class="right clearfix sm-width-full py-2 mb-2 mb-lg-0"><a href="https://twitter.com/gavinwray">Twitter</a> &middot; <a href="https://www.linkedin.com/in/gavinwray/">LinkedIn</a> &middot; <a href="https://soundcloud.com/finalpilots">SoundCloud</a> &middot; <a href="https://github.com/gavinwray">GitHub</a></p>
   </div>
 </div>

@@ -73,15 +73,15 @@
   </div>
 
   <div class="prose py-4" itemprop="articleBody">
-      <p>I moved this blog from <a href="/2017/12/goodbye-wordpress-hello-hugo/">WordPress to Hugo</a> in December 2017 to learn about static site generators and to practise maintaining a site using modern processes like Git. I chose the <a href="https://github.com/jpescador/hugo-future-imperfect">Future Imperfect theme</a> as a foundation and put my own styles in <code class="highlighter-rouge">add-on.css</code>, which takes precedence over the theme’s stylesheet <code class="highlighter-rouge">main.css</code>.</p>
+      <p>I moved this blog from <a href="/2017/12/goodbye-wordpress-hello-hugo/">WordPress to Hugo</a> in December 2017 to learn about static site generators and to practise maintaining a site using modern processes like Git. I chose the <a href="https://github.com/jpescador/hugo-future-imperfect">Future Imperfect theme</a> as a foundation and put my own styles in <code class="language-plaintext highlighter-rouge">add-on.css</code>, which takes precedence over the theme’s stylesheet <code class="language-plaintext highlighter-rouge">main.css</code>.</p>
 
 <p>Override stylesheets are useful. You can restyle elements of a theme yet leave the core styles such as layout and typography intact. When a new version of the core stylesheet is available, you can upgrade a theme without affecting your override stylesheet.</p>
 
-<p>Over time though, override stylesheets can bloat. Four months after switching to Hugo, I reached a tipping point. Battling <a href="https://css-tricks.com/precedence-css-order-css-matters/">precedence</a> conflicts and unwanted cascades between <code class="highlighter-rouge">add-on.css</code> and <code class="highlighter-rouge">main.css</code> took too much time. I wanted a tidy, maintainable theme and to commit more time to blogging.</p>
+<p>Over time though, override stylesheets can bloat. Four months after switching to Hugo, I reached a tipping point. Battling <a href="https://css-tricks.com/precedence-css-order-css-matters/">precedence</a> conflicts and unwanted cascades between <code class="language-plaintext highlighter-rouge">add-on.css</code> and <code class="language-plaintext highlighter-rouge">main.css</code> took too much time. I wanted a tidy, maintainable theme and to commit more time to blogging.</p>
 
 <h2 id="confidence">Confidence</h2>
 
-<p><a href="https://en.wikipedia.org/wiki/Code_refactoring">Refactoring</a> a theme can be a scary, significant undertaking. <code class="highlighter-rouge">main.css</code> has 2,500 lines while my <code class="highlighter-rouge">add-on.css</code> has reached 1,000 lines.</p>
+<p><a href="https://en.wikipedia.org/wiki/Code_refactoring">Refactoring</a> a theme can be a scary, significant undertaking. <code class="language-plaintext highlighter-rouge">main.css</code> has 2,500 lines while my <code class="language-plaintext highlighter-rouge">add-on.css</code> has reached 1,000 lines.</p>
 
 <p>As well as merging these stylesheets into one file, I wanted to edit other parts of the theme, which is written in the <a href="https://golang.org/">Go</a> language. I’m no programmer. I scrape through by reading manuals or trial and error.</p>
 
@@ -97,14 +97,14 @@
 <p>Before writing a line of CSS, I decided on three principles:</p>
 
 <ol>
-  <li>Design for small screens first and progressively add style for wider breakpoints. This meant inverting <code class="highlighter-rouge">main.css</code>’s large-screen-first-then-down structure of media queries.</li>
+  <li>Design for small screens first and progressively add style for wider breakpoints. This meant inverting <code class="language-plaintext highlighter-rouge">main.css</code>’s large-screen-first-then-down structure of media queries.</li>
   <li>Write in <a href="http://lesscss.org/">LESS</a> instead of CSS to take advantage of <a href="http://lesscss.org/features/#variables-feature">variables</a> and to be more efficient.</li>
   <li>Define a new typography scheme with a larger base font size, and vertical rhythm and spacing based on ems.</li>
 </ol>
 
 <h2 id="responsive-breakpoints">Responsive breakpoints</h2>
 
-<p>I prefer names related to scales rather than devices such as <code class="highlighter-rouge">-tablet</code> or <code class="highlighter-rouge">-mobile</code>. At the top of <code class="highlighter-rouge">main.less</code>, I defined breakpoint variable names inspired by T-shirt sizes:</p>
+<p>I prefer names related to scales rather than devices such as <code class="language-plaintext highlighter-rouge">-tablet</code> or <code class="language-plaintext highlighter-rouge">-mobile</code>. At the top of <code class="language-plaintext highlighter-rouge">main.less</code>, I defined breakpoint variable names inspired by T-shirt sizes:</p>
 
 <pre><code class="language-less">@screen-xxl-min: 1680px;
 @screen-xl-max: 1679px;
@@ -119,7 +119,7 @@
 
 <h2 id="colour-palette">Colour palette</h2>
 
-<p>At the top of <code class="highlighter-rouge">main.less</code>, I defined colour variables with names prefixed with <code class="highlighter-rouge">gw-</code>. This helps me search for instances of the colour classes I use throughout the stylesheet. It also makes changing the whole site palette a swift task.</p>
+<p>At the top of <code class="language-plaintext highlighter-rouge">main.less</code>, I defined colour variables with names prefixed with <code class="language-plaintext highlighter-rouge">gw-</code>. This helps me search for instances of the colour classes I use throughout the stylesheet. It also makes changing the whole site palette a swift task.</p>
 
 <pre><code class="language-less">@gw-green-mid: #2ab7ca;
 @gw-green-dark: #1b7581;
@@ -136,7 +136,7 @@
   <p>“… authors are encouraged to use values that describe the nature of the content, rather than values that describe the desired presentation of the content.”</p>
 </blockquote>
 
-<p>I could use <code class="highlighter-rouge">@gw-colour-mid</code>, for example. In this instance though, as it’s only me maintaining the stylesheet, I chose a variable name that’s semantic to me.</p>
+<p>I could use <code class="language-plaintext highlighter-rouge">@gw-colour-mid</code>, for example. In this instance though, as it’s only me maintaining the stylesheet, I chose a variable name that’s semantic to me.</p>
 
 <h2 id="typography">Typography</h2>
 
@@ -148,7 +148,7 @@
 
 <h2 id="mini-map">Mini map</h2>
 
-<p>To help write the new stylesheet and tick off sections of <code class="highlighter-rouge">main.css</code> and <code class="highlighter-rouge">add-on.css</code> as I merged them, I used a mini map with <code class="highlighter-rouge">TODO:</code> comments at the top of <code class="highlighter-rouge">main.less</code>. The map outlines the stylesheet structure:</p>
+<p>To help write the new stylesheet and tick off sections of <code class="language-plaintext highlighter-rouge">main.css</code> and <code class="language-plaintext highlighter-rouge">add-on.css</code> as I merged them, I used a mini map with <code class="language-plaintext highlighter-rouge">TODO:</code> comments at the top of <code class="language-plaintext highlighter-rouge">main.less</code>. The map outlines the stylesheet structure:</p>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/*
 - Palette variables
@@ -184,15 +184,15 @@
 
 <p><img src="/assets/2018/06/work-left-right.jpg" alt="Eye tracking across a page layout" /></p>
 
-<p>When I get stuck or take a break, I leave <code class="highlighter-rouge">TODO:</code> comments in <code class="highlighter-rouge">main.less</code>. Wayou Liu’s <a href="https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight">TODO Highlight extension</a> for Visual Studio Code helps me see these:</p>
+<p>When I get stuck or take a break, I leave <code class="language-plaintext highlighter-rouge">TODO:</code> comments in <code class="language-plaintext highlighter-rouge">main.less</code>. Wayou Liu’s <a href="https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight">TODO Highlight extension</a> for Visual Studio Code helps me see these:</p>
 
 <p><img src="/assets/2018/06/to-do-highlight.png" alt="Highlighted comment in Visual Studio Code" /></p>
 
-<p>Searching the theme for <code class="highlighter-rouge">TODO</code> helps me find any parts I may have forgotten about.</p>
+<p>Searching the theme for <code class="language-plaintext highlighter-rouge">TODO</code> helps me find any parts I may have forgotten about.</p>
 
 <h2 id="compiling-less-to-css">Compiling LESS to CSS</h2>
 
-<p>I’m using <a href="http://koala-app.com/">Koala</a> to watch for changes to <code class="highlighter-rouge">main.less</code> and compile it to the theme’s <code class="highlighter-rouge">main.css</code>. Using an app outside of the <a href="https://gohugo.io/getting-started/usage/#the-hugo-command">Hugo build</a> and deploy process is not best practice though. I should work out how to include preprocessing and compiling as part of the Hugo site build. That’s some chunky learning for another day.</p>
+<p>I’m using <a href="http://koala-app.com/">Koala</a> to watch for changes to <code class="language-plaintext highlighter-rouge">main.less</code> and compile it to the theme’s <code class="language-plaintext highlighter-rouge">main.css</code>. Using an app outside of the <a href="https://gohugo.io/getting-started/usage/#the-hugo-command">Hugo build</a> and deploy process is not best practice though. I should work out how to include preprocessing and compiling as part of the Hugo site build. That’s some chunky learning for another day.</p>
 
 <p>For now, I have one maintainable stylesheet for the theme, a responsive mobile-first implementation and a clean visual aesthetic based on solid typography. The original 3,500 lines of CSS are a more manageable 2,000 lines of LESS.</p>
 
@@ -229,7 +229,7 @@
     <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
   <div class="border-top-thick">
     <p class="col-6 sm-width-full left py-2 mb-0">Content &copy; 2020 Gavin Wray<br />
-      <a href="https://github.com/broccolini/athena">Athena theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
+      <a href="https://github.com/broccolini/athena">Athena Jekyll theme</a> by <a href="https://github.com/broccolini">Diana Mounter</a></p>
     <p class="right clearfix sm-width-full py-2 mb-2 mb-lg-0"><a href="https://twitter.com/gavinwray">Twitter</a> &middot; <a href="https://www.linkedin.com/in/gavinwray/">LinkedIn</a> &middot; <a href="https://soundcloud.com/finalpilots">SoundCloud</a> &middot; <a href="https://github.com/gavinwray">GitHub</a></p>
   </div>
 </div>
